@@ -8,6 +8,7 @@ export default function AddUserComponent(props) {
     const submitHandler = (event) => {
         event.preventDefault();
         console.log(inputName, inputAge);
+        props.onAddUser(inputName, inputAge);
         setInputName('');
         setInputAge('');
     }

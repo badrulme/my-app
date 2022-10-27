@@ -9,7 +9,7 @@ export default function UserListComponent(props) {
                     <div className="card">
                         <ul className="list-group list-group-flush">
                             {props.users.map(data => (
-                                <li className="list-group-item">{data.id}, {data.name}, {data.age}</li>
+                                <li key={data.id} className="list-group-item">{data.id}, {data.name}, {data.age}</li>
                             ))}
                         </ul>
                     </div>

@@ -26,12 +26,14 @@ export default function UserComponent() {
         ]
     );
 
-    const addUser = (prevState) => {
-
+    const addUserHandler = (name, age) => {
+        setUsers((users) => {
+            return [...users, { id: Math.random().toString(), name: name, age: age }]
+        })
     }
     return (
         <>
-            <AddUserComponent />
+            <AddUserComponent onAddUser={addUserHandler} />
             <UserListComponent users={users} />
         </>
     )
